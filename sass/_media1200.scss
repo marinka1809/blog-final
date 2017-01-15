@@ -4,5 +4,53 @@
     font: 18px $primary-font;
   }
 
+  #header {
+    .logo {
+      line-height: 2.1em;
+    }
 
+    .search {
+
+      input {
+        line-height: 2.85em;
+      }
+
+      .button {
+        line-height: 2.95em;
+      }
+    }
+
+    .category-nav {
+
+      .hide3 {
+        display: block;
+      }
+
+      .dropdown-hide3 {
+        display: none;
+      }
+    }
+  }
+
+  .slider-section {
+    .content-slide {
+      top: 60px;
+
+      .flex-container {
+
+        h2 {
+          font-size: 2.7em;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1400px) {
+  .slider-section {
+    .content-slide {
+      top: 180px;
+    }
+  }
 }

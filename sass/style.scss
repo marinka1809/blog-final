@@ -3,6 +3,15 @@ $secondary-font: 'PT Sans', sans-serif;;
 
 @import "reset";
 
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/ProximaNova-Regular.woff") format("woff"),
+  url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 body {
   font: 13px $primary-font;
@@ -45,11 +54,11 @@ body {
 article {
   .img-wrapper {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
-  p {
-    margin-bottom: 20px;
+  h2 {
+    margin-bottom: 10px;
   }
 }
 
@@ -70,13 +79,18 @@ article {
     padding-left: 10px;
     color: #1a54e7;
     text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+      color: #47c8e6;
+    }
   }
 }
 
 //---------------------------HEADER------------------------
 #header {
   font-family: $secondary-font;
-  background-image: linear-gradient(to right, #1a54e7 20%, #ffffff 20%, #ffffff 100%);
+  background-image: linear-gradient(to right, #1a54e7 22%, #ffffff 22%, #ffffff 100%);
 
   .nav-wrapper {
     margin: 0;
@@ -84,65 +98,69 @@ article {
     border: none;
     box-shadow: none;
 
-
     .mob-menu-button {
-      margin: 20px;
-      background-color: transparent;
-
-      .icon-bar {
-
-      }
+      background-color: #ffffff;
 
       &:focus,
       &:hover,
       .active {
-        background-color: transparent;
-        //box-shadow: 0 0 8px $second-color;
+        background-color: #ffffff;;
+        box-shadow: 0 0 8px #1a54e7;
       }
     }
   }
-  .mob-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    background-color: #ffffff;
 
+  .mob-navbar {
+    background-color: #ffffff;
   }
 
   .logo {
-    display: inline-flex;
-    padding-right: 1.5em;
-    font: 1.4em/2em $secondary-font;
+    display: inline-block;
+    padding: 5px 1em;
+    font: 1.4em/2.2em $secondary-font;
     color: #ffffff;
     background-color: #1a54e7;
+
     span {
       font-weight: bold;
     }
 
-    a{
+    a {
       color: inherit;
+    }
+
+    &:hover {
+      a {
+        color: #c5faff;
+        text-decoration: none;
+      }
     }
   }
 
   .search {
     position: relative;
     height: 100%;
+    margin: 0;
+    padding: 0;
 
     input {
       position: absolute;
       z-index: -1;
       top:0;
-      bottom:0;
       width: 0;
-      margin-left: -30px;
-      transition: all 0.8s ease-in-out;
+      padding: 0;
+      transition: all 0.7s ease-in-out;
+      line-height: 2.85em;
+      border: 1px solid #b2b2b2;
+      border-radius: 0;
     }
 
    &:hover input,
    input:focus {
-     z-index: 1;
+     z-index: 2;
      width: 220px;
      margin-left: 0;
+     padding: 0 10px;
     }
 
     .button {
@@ -152,23 +170,57 @@ article {
       background-color: #f6f6f6;
       border: 0;
       border-radius: 0;
+
+      &:hover {
+        color: #a2a2a2;
+        background-color: #d8d8d8;
+      }
     }
   }
 
+  .collapsing {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    right: 15px;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+
+  .collapse.in {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    right: 15px;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+
   .main-nav {
+    margin-left: 0;
     color: #b2b2b2;
     a {
       color: inherit;
+      border-bottom: 3px solid transparent;
+
+      &.active,
+      &:hover {
+        color: #a2a2a2;
+        border-bottom: 3px solid #a2a2a2;
+      }
     }
   }
 
   .category-nav {
     color: #1a54e7;
-    .hide {
+
+    .hide-category {
       display: none;
     }
+
     a {
       color: inherit;
+      border-bottom: 3px solid transparent;
 
       &.active,
       &:hover {
@@ -190,11 +242,25 @@ article {
 //---------------------------SLIDER-SECTION------------------------
 .slider-section {
 
+  .item {
+    overflow: hidden;
+    height: 250px;
+
+    > img {
+      filter: brightness(60%);
+      max-width: 1000px;
+      width: auto;
+      height: 100%;
+      transform: translateX(-20%);
+
+    }
+  }
+
   .content-slide {
-    top: 180px;
+    top: 10px;
     right: 0;
     left: 0;
-    bottom: 40px;
+    bottom: 10px;
     padding: 0;
 
     .flex-container {
@@ -203,15 +269,19 @@ article {
       justify-content: space-between;
       align-items: center;
       height: 100%;
-    }
 
-    h2 {
-      width: 80%;
-      margin: auto auto;
-      font-size: 2.7em;
+      .top-caption {
+        margin: 0 0 auto;
+      }
 
-      a {
-        color: inherit;
+      h2 {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.4em;
+
+        a {
+          color: inherit;
+        }
       }
     }
   }
@@ -231,8 +301,8 @@ article {
     display: inline-block;
     overflow: hidden;
     margin-bottom: 10px;
-    max-width: 135px;
-    max-height: 135px;
+    max-width: 70px;
+    max-height: 70px;
     border-radius: 50%;
   }
 
@@ -270,44 +340,67 @@ article {
   }
 }
 
-
-  //---------------------------POPULAR-ARTICLES------------------------
+//---------------------------POPULAR-ARTICLES------------------------
 .popular-articles {
-  padding: 30px 0 50px;
+  padding: 20px 0 10px;
   background-color: #f6f6f6;
 
   article {
-    p {
+    margin-bottom: 30px;
+
+    h2 {
       font-size: 1.4em;
+
+      a {
+        color: inherit;
+      }
     }
   }
 }
 
 //---------------------------LAST-ARTICLES------------------------
 .last-articles {
-  padding: 45px 0 30px;
+  padding: 35px 0 10px;
 
   .title-article {
     position: relative;
-    margin-bottom: 50px;
+    height: 200px;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    img {
+      max-width: 1000px;
+      width: auto;
+      height: 100%;
+      transform: translateX(-25%);
+
+    }
 
     .caption-article {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 25px;
+      bottom: 10px;
       color: #ffffff;
 
-      h1 {
-        font-size: 2.7em;
+      h2{
+        font-size: 1.9em;
         text-align: center;
+
+        a {
+          color: inherit;
+        }
       }
 
       p {
-        width: 60%;
+        width: 90%;
         margin: 0 auto 25px;
-        line-height: 1.8em;
+        line-height: 1.6em;
         text-align: center;
+
+        a {
+          color: inherit;
+        }
       }
 
       .bottom-caption {
@@ -327,15 +420,21 @@ article {
     }
   }
 
+  h2 {
+    a {
+      color: inherit;
+    }
+  }
+
   li {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 }
 
 
 //---------------------------SUBSCRIBE-SECTION------------------------
 .subscribe-section {
-  padding: 95px 0 130px;
+  padding: 30px 0 50px;
   text-align: center;
   color: #ffffff;
   background: url(../img/bg-sabcribe.jpg) 50% 50% no-repeat;
@@ -346,14 +445,14 @@ article {
   }
 
   p {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 1.4em;
     color: #8baeff;
   }
 
   #mc-embedded-subscribe-form {
     position: relative;
-    width: 35%;
+    width: 100%;
     margin: 0 auto;
     line-height: 2.8em;
 
@@ -388,13 +487,15 @@ article {
 
 //-----------------------FOOTER-----------------
 #footer {
-  padding: 80px 0 160px;
+  padding: 30px 0 40px;
+  font-family: 'ProximaNova';
   text-align: center;
   color: #a7acbc;
   background-color: #ffffff;
 
   p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    line-height: 1.4em;
   }
 
   a {

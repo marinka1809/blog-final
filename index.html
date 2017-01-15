@@ -21,27 +21,28 @@
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header mob-navbar">
+              <button type="button" class="navbar-toggle collapsed mob-menu-button" data-toggle="collapse" data-target="#top-navbar-collapse" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
             <h1 class="logo">
               <a href="#">
                 Blog <span>template</span>
               </a>
             </h1>
-            <form class="search">
-                <button type="submit" class="button">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-                <input type="text" maxlength="64" placeholder="Search">
-            </form>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="collapse navbar-collapse" id="top-navbar-collapse">
+            <form class="navbar-form search">
+              <button type="submit" class="button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <input type="text" maxlength="64" placeholder="Search">
+            </form>
+
             <ul class="nav navbar-nav main-nav">
               <li><a href="#">About</a></li>
               <li><a href="#">Cooperation</a></li>
@@ -49,11 +50,11 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right category-nav">
-              <li class="hide"><a href="#">Nature</a></li>
-              <li><a class="active" href="#">People</a></li>
+              <li class="hide-category hide1"><a href="#">Nature</a></li>
+              <li><a class="" href="#">People</a></li>
               <li><a href="#">Trips</a></li>
-              <li class="hide"><a href="#">Animals</a></li>
-              <li class="hide"><a href="#">Fashion</a></li>
+              <li class="hide-category hide2"><a href="#">Animals</a></li>
+              <li class="hide-category hide3"><a href="#">Fashion</a></li>
               <li><a href="#">Tech</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -62,9 +63,9 @@
                   <span class="icon-point"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Nature</a></li>
-                  <li><a href="#">Animals</a></li>
-                  <li><a href="#">Fashion</a></li>
+                  <li class="dropdown-hide1"><a href="#">Nature</a></li>
+                  <li class="dropdown-hide2"><a href="#">Animals</a></li>
+                  <li class="dropdown-hide3"><a href="#">Fashion</a></li>
                   <li><a href="#">Policy</a></li>
                   <li><a href="#">Crime</a></li>
                   <li><a href="#">Life</a></li>
@@ -84,15 +85,17 @@
             <img src="img/top-slider-1.jpg" alt="Tents">
             <div class="carousel-caption content-slide">
               <div class="container flex-container">
-                <div class="photo-wrapper">
-                  <img src="img/photo-1.jpg" class="img-responsive">
+                <div class="top-caption">
+                  <div class="photo-wrapper">
+                    <img src="img/photo-1.jpg" class="img-responsive">
+                  </div>
+                  <h2>
+                      <a href="#">
+                        Maecenas quis lobortis nunc. Nullam sit
+                        vel odio congue vulputate a ut nisi.
+                      </a>
+                  </h2>
                 </div>
-                <h2>
-                    <a href="#">
-                      Maecenas quis lobortis nunc. Nullam sit
-                      vel odio congue vulputate a ut nisi.
-                    </a>
-                </h2>
                 <div class="bottom-caption">
                   <a class="category category-people" href="#">People</a>
                   <div class="info-article">
@@ -105,12 +108,146 @@
           </div>
           <div class="item">
             <img src="img/top-slider-2.jpg" alt="Castle">
-            <div class="carousel-caption">
+            <div class="carousel-caption content-slide">
+              <div class="container flex-container">
+                <div class="top-caption">
+                  <div class="photo-wrapper">
+                    <img src="img/photo-1.jpg" class="img-responsive">
+                  </div>
+                  <h2>
+                    <a href="#">
+                      Proin congue elit fringilla sodales tellus interdum fermentum nulla.
+                    </a>
+                  </h2>
+                </div>
+                <div class="bottom-caption">
+                  <a class="category category-trips" href="#">Trips</a>
+                  <div class="info-article">
+                    <data value="11/09/2016">11 septemvber 2016 </data>
+                    <a class="link-author" href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="item">
             <img src="img/top-slider-3.jpg" alt="Transport tunnel">
-            <div class="carousel-caption">
+            <div class="carousel-caption content-slide">
+              <div class="container flex-container">
+                <div class="top-caption">
+                  <div class="photo-wrapper">
+                    <img src="img/photo-1.jpg" class="img-responsive">
+                  </div>
+                  <h2>
+                    <a href="#">
+                      Donec elementum dui semper, pretium dui quis, pretium nisl.
+                    </a>
+                  </h2>
+                </div>
+                <div class="bottom-caption">
+                  <a class="category category-nature" href="#">Nature</a>
+                  <div class="info-article">
+                    <data value="11/09/2016">11 septemvber 2016 </data>
+                    <a class="link-author" href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/top-slider-4.jpg" alt="Transport tunnel">
+            <div class="carousel-caption content-slide">
+              <div class="container flex-container">
+                <div class="top-caption">
+                  <div class="photo-wrapper">
+                    <img src="img/photo-1.jpg" class="img-responsive">
+                  </div>
+                  <h2>
+                    <a href="#">
+                      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+                    </a>
+                  </h2>
+                </div>
+                <div class="bottom-caption">
+                  <a class="category category-people" href="#">People</a>
+                  <div class="info-article">
+                    <data value="11/09/2016">11 septemvber 2016 </data>
+                    <a class="link-author" href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/top-slider-5.jpg" alt="Transport tunnel">
+            <div class="carousel-caption content-slide">
+              <div class="container flex-container">
+                <div class="top-caption">
+                  <div class="photo-wrapper">
+                    <img src="img/photo-1.jpg" class="img-responsive">
+                  </div>
+                  <h2>
+                    <a href="#">
+                      Sed arcu ipsum, convallis quis porttitor bibendum, convallis non enim.
+                    </a>
+                  </h2>
+                </div>
+                <div class="bottom-caption">
+                  <a class="category category-tech" href="#">Tech</a>
+                  <div class="info-article">
+                    <data value="11/09/2016">11 septemvber 2016 </data>
+                    <a class="link-author" href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/top-slider-6.jpg" alt="Transport tunnel">
+            <div class="carousel-caption content-slide">
+              <div class="container flex-container">
+                <div class="top-caption">
+                  <div class="photo-wrapper">
+                    <img src="img/photo-1.jpg" class="img-responsive">
+                  </div>
+                  <h2>
+                    <a href="#">
+                      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+                    </a>
+                  </h2>
+                </div>
+                <div class="bottom-caption">
+                  <a class="category category-trips" href="#">Trips</a>
+                  <div class="info-article">
+                    <data value="11/09/2016">11 septemvber 2016 </data>
+                    <a class="link-author" href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="img/top-slider-7.jpg" alt="Transport tunnel">
+            <div class="carousel-caption content-slide">
+              <div class="container flex-container">
+                <div class="top-caption">
+                  <div class="photo-wrapper">
+                    <img src="img/photo-1.jpg" class="img-responsive">
+                  </div>
+                  <h2>
+                    <a href="#">
+                      Sed arcu ipsum, convallis quis porttitor bibendum, convallis non enim.
+                    </a>
+                  </h2>
+                </div>
+                <div class="bottom-caption">
+                  <a class="category category-fashion" href="#">Fashion</a>
+                  <div class="info-article">
+                    <data value="11/09/2016">11 septemvber 2016 </data>
+                    <a class="link-author" href="#">John Doe</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -140,7 +277,11 @@
               <img class="img-responsive" src="img/castle.jpg" alt="Castle">
               <a class="category category-trips" href="#">Trips</a>
             </div>
-            <p>Donec elementum dui semper, pretium dui quis, pretium nisl. Nunc quis ornare odio.</p>
+            <h2>
+              <a href="#">
+                Donec elementum dui semper, pretium dui quis, pretium nisl. Nunc quis ornare odio.
+              </a>
+            </h2>
             <div class="info-article">
               <data value="11/09/2016">11 septemvber 2016 </data>
               <a class="link-author" href="#">John Doe</a>
@@ -151,7 +292,11 @@
               <img class="img-responsive" src="img/the-airport-hall.jpg" alt="The airport hall">
               <a class="category category-tech" href="#">Tech</a>
             </div>
-            <p>Maecenas quis lobortis nunc. Nullam sit amet augue vel odio congue vulputate a ut nisi.</p>
+            <h2>
+              <a href="#">
+                Maecenas quis lobortis nunc. Nullam sit amet augue vel odio congue vulputate a ut nisi.
+              </a>
+            </h2>
             <div class="info-article">
               <data value="14/09/2016">14 septemvber 2016 </data>
               <a class="link-author" href="#">John Doe</a>
@@ -165,11 +310,17 @@
         <article class="title-article">
           <img class="img-responsive" src="img/transport-tunnel.jpg" alt="Transport-tunnel">
           <div class="caption-article">
-            <h1> Proin congue elit fringilla</h1>
-            <p>
-              sodales tellus interdum fermentum nulla. Aliquam vitae arcu condimentum,
-              consectetur diam sed, ultrices urna.
-            </p>
+              <h2>
+                <a href="#">
+                  Proin congue elit fringilla
+                </a>
+              </h2>
+              <p>
+                <a href="#">
+                sodales tellus interdum fermentum nulla. Aliquam vitae arcu condimentum,
+                consectetur diam sed, ultrices urna.
+                </a>
+              </p>
             <div class="bottom-caption">
               <a class="category category-trips" href="#">Trips</a>
               <div class="info-article">
@@ -186,7 +337,9 @@
                 <img class="img-responsive" src="img/lemons-limes.jpg" alt="Lemons and limes">
                 <a class="category category-nature" href="#">Nature</a>
               </div>
-              <p>Donec elementum dui semper, pretium dui quis, pretium nisl.</p>
+              <h2>
+                <a href="#">Donec elementum dui semper, pretium dui quis, pretium nisl.</a>
+              </h2>
               <div class="info-article">
                 <data value="11/09/2016">11 septemvber 2016 </data>
                 <a class="link-author" href="#">John Doe</a>
@@ -199,7 +352,11 @@
                 <img class="img-responsive" src="img/old-photos.jpg" alt="Old photos">
                 <a class="category category-people" href="#">People</a>
               </div>
-              <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+              <h2>
+                <a href="#">
+                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+                </a>
+              </h2>
               <div class="info-article">
                 <data value="11/09/2016">11 septemvber 2016 </data>
                 <a class="link-author" href="#">John Doe</a>
@@ -212,7 +369,9 @@
                 <img class="img-responsive" src="img/multistory-house.jpg" alt="Multistory house">
                 <a class="category category-tech" href="#">Tech</a>
               </div>
-              <p>Sed arcu ipsum, convallis quis porttitor bibendum, convallis non enim.</p>
+              <h2>
+                <a href="#">Sed arcu ipsum, convallis quis porttitor bibendum, convallis non enim.</a>
+              </h2>
               <div class="info-article">
                 <data value="11/09/2016">11 septemvber 2016 </data>
                 <a class="link-author" href="#">John Doe</a>
@@ -225,7 +384,9 @@
                 <img class="img-responsive" src="img/tents.jpg" alt="Tents">
                 <a class="category category-trips" href="#">Trips</a>
               </div>
-              <p>Donec elementum dui semper, pretium dui quis, pretium nisl.</p>
+              <h2>
+                <a href="#">Donec elementum dui semper, pretium dui quis, pretium nisl.</a>
+              </h2>
               <div class="info-article">
                 <data value="11/09/2016">11 septemvber 2016 </data>
                 <a class="link-author" href="#">John Doe</a>
@@ -238,7 +399,11 @@
                 <img class="img-responsive" src="img/waves.jpg" alt="Waves">
                 <a class="category category-trips" href="#">Trips</a>
               </div>
-              <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+              <h2>
+                <a href="#">
+                  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+                </a>
+              </h2>
               <div class="info-article">
                 <data value="11/09/2016">11 septemvber 2016 </data>
                 <a class="link-author" href="#">John Doe</a>
@@ -251,7 +416,9 @@
                 <img class="img-responsive" src="img/street.jpg" alt="Street Paris">
                 <a class="category category-fashion" href="#">Fashion</a>
               </div>
-              <p>Sed arcu ipsum, convallis quis porttitor bibendum, convallis non enim.</p>
+              <h2>
+                <a href="#">Sed arcu ipsum, convallis quis porttitor bibendum, convallis non enim.</a>
+              </h2>
               <div class="info-article">
                 <data value="11/09/2016">11 septemvber 2016 </data>
                 <a class="link-author" href="#">John Doe</a>
@@ -269,7 +436,11 @@
               <img class="img-responsive" src="img/castle.jpg" alt="Castle">
               <a class="category category-trips" href="#">Trips</a>
             </div>
-            <p>Donec elementum dui semper, pretium dui quis, pretium nisl. Nunc quis ornare odio.</p>
+            <h2>
+              <a href="#">
+                Donec elementum dui semper, pretium dui quis, pretium nisl. Nunc quis ornare odio.
+              </a>
+            </h2>
             <div class="info-article">
               <data value="11/09/2016">11 septemvber 2016 </data>
               <a class="link-author" href="#">John Doe</a>
@@ -280,7 +451,11 @@
               <img class="img-responsive" src="img/the-airport-hall.jpg" alt="The airport hall">
               <a class="category category-tech" href="#">Tech</a>
             </div>
-            <p>Maecenas quis lobortis nunc. Nullam sit amet augue vel odio congue vulputate a ut nisi.</p>
+            <h2>
+              <a href="#">
+                Maecenas quis lobortis nunc. Nullam sit amet augue vel odio congue vulputate a ut nisi.
+              </a>
+            </h2>
             <div class="info-article">
               <data value="14/09/2016">14 septemvber 2016 </data>
               <a class="link-author" href="#">John Doe</a>
