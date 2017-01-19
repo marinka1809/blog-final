@@ -55,6 +55,12 @@ article {
   .img-wrapper {
     position: relative;
     margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
   }
 
   h2 {
@@ -362,6 +368,7 @@ article {
 .last-articles {
   padding: 35px 0 10px;
 
+
   .title-article {
     position: relative;
     height: 200px;
@@ -369,7 +376,6 @@ article {
     overflow: hidden;
 
     img {
-      max-width: 1000px;
       width: auto;
       height: 100%;
       transform: translateX(-25%);

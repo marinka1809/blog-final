@@ -89,6 +89,9 @@ body {
 article .img-wrapper {
   position: relative;
   margin-bottom: 10px; }
+  article .img-wrapper img {
+    width: 100%;
+    height: auto; }
 
 article h2 {
   margin-bottom: 10px; }
@@ -329,7 +332,6 @@ article h2 {
     margin-bottom: 30px;
     overflow: hidden; }
     .last-articles .title-article img {
-      max-width: 1000px;
       width: auto;
       height: 100%;
       -webkit-transform: translateX(-25%);
